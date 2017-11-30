@@ -1,6 +1,6 @@
 using System;
 
-namespace ObjectPrinting.Solved
+namespace ObjectPrinting
 {
 	public static class PropertyPrintingConfigExtensions
 	{
@@ -11,7 +11,9 @@ namespace ObjectPrinting.Solved
 
 		public static PrintingConfig<TOwner> TrimmedToLength<TOwner>(this PropertyPrintingConfig<TOwner, string> propConfig, int maxLen)
 		{
-			return ((IPropertyPrintingConfig<TOwner, string>)propConfig).ParentConfig;
+            //((IPropertyPrintingConfig<TOwner, string>)propConfig).ParentConfig.AddPropertyMaxLength();
+
+            return ((IPropertyPrintingConfig<TOwner, string>)propConfig).ParentConfig;
 		}
 
 	}
